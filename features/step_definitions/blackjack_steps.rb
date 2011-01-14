@@ -1,8 +1,17 @@
 Given /^I didn't started the game yet$/ do
 end
 
+class Output
+  def messages
+    @messages ||= []
+  end
+  def puts(message)
+    messages << message
+  end
+end
+
 def output
-  @output ||= Array.new
+  @output ||= Output.new
 end
 
 When /^I start the game$/ do
