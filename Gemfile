@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem "rspec"
 gem "cucumber"
 gem "mocha"
-gem 'autotest'
 
 #irb stuff
 gem 'wirble'
