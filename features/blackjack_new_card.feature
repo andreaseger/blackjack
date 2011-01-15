@@ -8,8 +8,8 @@ Background:
    And have a score of 0
 
 
-Scenario: getting an Ace and show its value
- Given the next card in the stack is an "Ace" with value 11
+Scenario: getting an Jack and show its value
+ Given the next card in the stack is an "Jack" with value 10
   When I want a new card
-  Then I should see "Your Card: Ace"
-   And I should see "Your Score: 11"
+  Then I should see "Your Card: Jack"
+   And I should see "Your Score: 10"

@@ -20,15 +20,15 @@ module Blackjack
         @game.start
       end
       it "should show the first cards name" do
-        stack = [{:name => 'Ace', :value => 11}]
+        stack = [{:name => 'Jack', :value => 10}]
         @game.stubs(:new_stack).returns(stack)
-        @output.expects(:puts).with('Your Card: Ace')
+        @output.expects(:puts).with('Your Card: Jack')
         @game.start
       end
       it "should show the first cards value" do
-        stack = [{:name => 'Ten', :value => 10}]
+        stack = [{:name => 'Nine', :value => 9}]
         @game.stubs(:new_stack).returns(stack)
-        @output.expects(:puts).with('Your Score: 10')
+        @output.expects(:puts).with('Your Score: 9')
         @game.start
       end
     end
