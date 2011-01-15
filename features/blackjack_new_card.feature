@@ -9,7 +9,15 @@ Background:
 
 
 Scenario: getting an Jack and show its value
- Given the next card in the stack is an "Jack" with value 10
+ Given the next card in the stack is a "Jack" with value 10
   When I want a new card
   Then I should see "Your Card: Jack"
    And I should see "Your Score: 10"
+
+Scenario: getting an two card
+ Given the next card in the stack is a "Five" with value 5
+	 And the second next card is a "King" with value 10
+  When I want a new card
+	 And I want a new card
+  Then I should see "Your Card: King"
+   And I should see "Your Score: 15"

@@ -1,6 +1,6 @@
 module Blackjack
   class Game
-    attr_reader :score
+    attr_accessor :score
     attr_accessor :stack
     def initialize(output)
       @output = output
@@ -15,8 +15,10 @@ module Blackjack
       end
     end
     def new_card
-      @output.puts "Your Card: #{@stack.first[:name]}"
-      @output.puts "Your Score: #{@stack.first[:value]}"
+      card = @stack.pop
+      @score += card[:value]
+      @output.puts "Your Card: #{card[:name]}"
+      @output.puts "Your Score: #{@score}"
     end
     def new_stack
     end
